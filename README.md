@@ -1,27 +1,13 @@
-# Next.js + Tailwind CSS Example
-
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
-
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
+### Create new Next.js project
 ```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
+npx create-next-app --example with-tailwindcss rsc-supabase --use-npm
+npm i @heroicons/react@2.0.13 @supabase/auth-helpers-nextjs@0.5.2 @supabase/supabase-js@2.1.1 zustand@4.1.4 supabase@1.15.1 date-fns@2.29.3
+npm i next@13.0.6-canary.2
 ```
-
+### Generate supabase types
 ```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+npx supabase login
+npx supabase init
+npx supabase link --project-ref your_project_id
+npx supabase gen types typescript --linked > database.types.ts
 ```
-
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
