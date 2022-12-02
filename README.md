@@ -2,7 +2,7 @@
 ```bash
 npx create-next-app --example with-tailwindcss rsc-supabase --use-npm
 npm i @heroicons/react@2.0.13 @supabase/auth-helpers-nextjs@0.5.2 @supabase/supabase-js@2.1.1 zustand@4.1.4 supabase@1.15.1 date-fns@2.29.3
-npm i next@13.0.6-canary.2
+npm i next@13.0.6
 ```
 ### Generate supabase types
 ```bash
